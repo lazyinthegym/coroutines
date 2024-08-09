@@ -11,7 +11,7 @@ repositories {
 
 dependencies {
     // add kotlin coroutines dependency
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
     testImplementation(kotlin("test"))
 }
 
