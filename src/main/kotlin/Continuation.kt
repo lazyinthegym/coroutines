@@ -1,4 +1,5 @@
 import kotlin.coroutines.resume
+import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
 
 /**
@@ -42,7 +43,22 @@ suspend fun resumeWithValue() {
 /**
  * The caller of this function will suspend until the user is returned. And then return it as a value
  */
-suspend fun requestUser() : String = suspendCoroutine<String> { continuation ->
+suspend fun requestUser(): String = suspendCoroutine<String> { continuation ->
     // Simulate a network request that returns a user
     continuation.resume("John Doe");
+}
+
+/**
+ * Shows how to resume a coroutine with an exception
+ */
+suspend fun resumeWithException() {
+    println("Before")
+
+    // Suspend this coroutine, and then resume with an exception
+    suspendCoroutine<Unit> { continuation ->
+        println("Inside suspendCoroutine")
+
+        // We can resume the coroutine with an exception
+        continuation.resumeWithException(Exception("Something went wrong"))
+    }
 }
