@@ -1,5 +1,3 @@
-package org.example
-
 import kotlin.coroutines.resume
 import kotlin.coroutines.suspendCoroutine
 
@@ -38,7 +36,7 @@ suspend fun resumeWithValue() {
         continuation.resume(42)
     }
 
-    println("After: $resumeValue")
+    println("After: Resumed with value $resumeValue")
 }
 
 /**

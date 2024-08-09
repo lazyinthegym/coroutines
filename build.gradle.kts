@@ -2,7 +2,7 @@ plugins {
     kotlin("jvm") version "2.0.0"
 }
 
-group = "org.example"
+group = "ahmad.coroutines"
 version = "1.0-SNAPSHOT"
 
 repositories {
@@ -10,7 +10,8 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
+    // add kotlin coroutines dependency
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.0")
     testImplementation(kotlin("test"))
 }
 
