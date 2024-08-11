@@ -1,5 +1,11 @@
 import kotlinx.coroutines.*
 
+/**
+ * Shows how to support cancellation in your coroutines.
+ * `Cancellation is Cooperative`
+ */
+
+
 // This can never be cancelled because it doesn't have any suspension points
 suspend fun longRunningWrong() {
     while(true) {
