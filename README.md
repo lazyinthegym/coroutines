@@ -1,6 +1,16 @@
 # Kotlin Coroutines
 A personal repository to learn and practice Kotlin Coroutines.
 
+## Suspension Points
+- A suspension point is a point in a coroutine where it can be paused ("suspended") and resumed later.
+- Calls to suspending functions of the Kotlin coroutine standard library are suspension points.
+- Examples:
+  - `delay()`
+  - `withContext()`
+  - `suspendCoroutine()`
+  - `suspendCancellableCoroutine()`
+  - `yield()`
+
 ## Main-Safety convention
 - All suspending functions should be main-safe.
 - Main-safe means that the function can be called from the main thread without blocking it.
@@ -23,18 +33,6 @@ Threads and coroutines are both used for concurrency but differ in how they oper
 - **Single-threaded concurrency**: Coroutines typically run on a single thread, offering concurrency without parallelism.
 
 In summary, threads are OS-level, can run in parallel, and are more resource-intensive, while coroutines are user-level, cooperative, and more lightweight.
-
-
-## Suspension Points
-- A suspension point is a point in a coroutine where it can be paused and resumed later.
-- Calls to suspending functions of the Kotlin coroutine standard library are suspension points.
-- Examples:
-  - `delay()`
-  - `withContext()`
-  - `suspendCoroutine()`
-  - `suspendCancellableCoroutine()`
-  - `yield()`
-
-
 # Resources
+* [Kotlin Coroutines Fundamentals by Lukas Lechner](https://www.youtube.com/playlist?list=PL-1MzrWZIYU2a4TGbSXeXzfet8Br3cya1)
 - [How Suspension Works in Kotlin Coroutines?](https://www.youtube.com/watch?v=5hR42Fkz2Ms)

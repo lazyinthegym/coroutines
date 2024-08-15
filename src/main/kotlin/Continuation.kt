@@ -15,7 +15,7 @@ suspend fun suspendAndContinue() {
 
         // continuation is like a "save" in a game
         // It captures the current state of the coroutine
-        // It can be used to resume the suspended coroutine.Without calling resume, the coroutine will never resume
+        // It can be used to resume the suspended coroutine. Without calling resume, the coroutine will never resume
         continuation.resume(Unit)
     }
 
